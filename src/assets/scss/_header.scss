@@ -1,6 +1,7 @@
 .heading {
     padding: 30px 0;
     z-index: 99;
+    width: 100%;
     @include sm {
         padding-top: 15px;
     }

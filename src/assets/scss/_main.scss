@@ -2,7 +2,66 @@
 *About Style
 =============*/
 .about{
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('../img/about-shap.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        z-index: -1;
+    }
     & .about-wrapper{
         background-image: url(../img/about-bg.png);
+    }
+}
+
+
+/*
+*Gasless Style
+=============*/
+.gasless{
+    position: relative;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('../img/gasless-shap.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        z-index: -1;
+    }
+}
+
+
+/*
+*Socialrecovery Style
+====================*/
+.socialrecovery{
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('../img/social-shap.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        z-index: -1;
     }
 }
