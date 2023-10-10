@@ -13,7 +13,7 @@ export default function Socialrecovery(){
             </div>
             <Container>
                 <Row className='align-items-center'>
-                    <Col lg={5}  lg={{offset: 7 }} >
+                    <Col lg={{span: 5, offset: 7 }} >
                         <div className="socialrecovery-content">
                             <figure className='img1'>
                                 <img src={Socialrightimg1} alt="" />
