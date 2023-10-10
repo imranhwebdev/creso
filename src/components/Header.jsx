@@ -25,7 +25,7 @@ export default function Header(){
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto">
+                    <Nav className="ms-auto">
                         <Link to="about"  spy={true} smooth={true} offset={50} duration={500} >Stake</Link>
                         <Link to="services" spy={true} smooth={true} offset={50} duration={500} >Blog</Link>
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >Socials</Link>
