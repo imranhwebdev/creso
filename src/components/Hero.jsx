@@ -21,6 +21,8 @@ export default function Hero(){
                         <div className="hero-right">
                            <figure>
                             <img src={heroimg2} alt="" />
+                           </figure>
+                           <figure>
                             <img src={heroimg1} alt="" />
                            </figure>
                         </div>
