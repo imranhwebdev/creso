@@ -1,0 +1,26 @@
+/* Footer css */
+
+.footer {
+    padding: 30px 0;
+    border-top: 1px solid #111217;
+    background-image: url("../img/footer-bg.svg");
+    background-color: #090C17;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include lg {
+        padding-top: 65px;
+    }
+    @include mmd {
+        padding-top: 65px;
+    }
+    p{
+        @include font-20;
+        padding:0 6%;
+        color: $white;
+    }
+}
+
+/* Footer css */
