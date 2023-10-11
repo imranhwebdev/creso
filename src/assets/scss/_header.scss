@@ -116,13 +116,13 @@
         img{
           max-width: 34px;  
         }
-       & button#dropdown-basic {
-            background: transparent !important;
+        & .dropdown-toggle.btn.btn-primary{
+            background: none !important;
+            border: 0 !important;
             color: #000;
             font-size: 18px;
             font-weight: 500;
             line-height: 152.5%;
-            border: 0;
             img{
                 margin:0 5px
             }
