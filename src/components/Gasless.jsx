@@ -7,11 +7,7 @@ import Gaslessrightimg from '../assets/img/gasless-right-img.png'
 export default function Gasless(){
     return(
         <div className="gasless" id='gasless'>
-            <div className="gasless-right-img">
-                <figure>
-                    <img src={Gaslessrightimg} alt="" />
-                </figure>
-            </div>
+            <img className="gasless-right-img" src={Gaslessrightimg} alt="" />
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={5}>

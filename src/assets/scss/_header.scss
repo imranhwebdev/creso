@@ -1,22 +1,21 @@
 .heading {
-    padding: 30px 0;
-    z-index: 99;
+    position: relative;
+    padding-top: 109px;
+    z-index: 999;
     width: 100%;
-    @include sm {
+    @include mmd {
         padding-top: 15px;
     }
     @include mmd {
         .navbar-toggler {
-            background: #fff;
             padding: 6px;
         }
         .navbar-collapse {
-            background: $black;
-            padding: 25px;
+            padding: 15px;
             & .navbar-nav {
                 & a {
-                    border-bottom: 1px solid #f3f3f321;
-                    padding:15px 0px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    padding:18px 0px;
                 }
             }
         }
@@ -32,22 +31,36 @@
     }
     & .base-btn{
         color: $black;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 16px 48px;
-        line-height: 27px;
+        @include font-20;
+        font-weight: 300;
+        padding: 19px 53px;
+        line-height: 152.5%;
+        border-radius: 44px;
+        border: 1.197px solid $black;
+        margin-left: 11px;
         &:hover{
+            background: $black;
+            color: #fff !important;
+        }
+        &.active{
             background: $black;
             color: #fff !important;
         }
         @include mmd{
             display: inline-block;
             margin-top: 20px;
+            padding: 15px 35px;
+        }
+        & svg{
+            rotate: -30deg;
+            margin-right: 10px;
+            margin-top: -5px;
         }
     }
 }
 
 .navbar-nav  {
+    margin-right: 15px;
     a {
         display: block;
         color: $light_black;
@@ -67,7 +80,9 @@
 .heading{
     &.fixed{
         position: fixed;
-        background-color: $black;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         transition: all .3s ease-in-out;
         padding: 10px 0;
     }

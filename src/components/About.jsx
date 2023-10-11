@@ -9,14 +9,14 @@ export default function About(){
             <Container>
                 <div className="about-wrapper">
                     <Row className='align-items-center'>
-                        <Col lg={6}>
+                        <Col lg={6} className='order-2 order-lg-1'>
                             <div className="about-left">
                               <figure>
                                 <img src={Aboutleftimg} alt="" />
                               </figure>
                             </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={6} className='order-1 order-lg-2'>
                             <div className="about-content">
                                 <figure>
                                     <img src={AboutRightArrowimg} alt="" />

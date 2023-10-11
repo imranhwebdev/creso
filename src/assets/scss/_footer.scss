@@ -1,9 +1,13 @@
 /* Footer css */
 
 .footer {
-    padding: 30px 0;
+    padding: 40px 0;
     position: relative;
     z-index: 1;
+    padding-top: 180px;
+    @include sm{
+        padding-top: 120px;
+    }
     &::after{
         position: absolute;
         content: "";
@@ -13,6 +17,40 @@
         height: 130%;
         background-color: $black;
         z-index: -1;
+    }
+    .footer-logo img{
+        max-width: 217px;
+        margin-bottom: 20px;
+        @include mmd{
+            max-width: 150px;
+        }
+    }
+    p{
+        color: $light_black_seven;
+        font-weight: 300;
+        @include font-20;
+        text-transform: capitalize;
+        line-height: 152.5%;
+    }
+    & .join__menu{
+        & ul li {
+            display: block;
+            & a{
+                padding: 12px 0;
+                display: block;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 152.5%;
+                color: $white;
+            }
+            
+           
+        }
+        & li a:hover{
+            opacity: .5 !important;
+        }
+        
     }
 }
 

@@ -6,11 +6,7 @@ import socialleftimg from '../assets/img/social-left-img.png'
 export default function Socialrecovery(){
     return(
         <div className="socialrecovery" id='socialrecovery'>
-            <div className="socialrecovery-left-img">
-                <figure>
-                    <img src={socialleftimg} alt="" />
-                </figure>
-            </div>
+            <img className='socialrecovery-left-img' src={socialleftimg} alt="" />
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={{span: 5, offset: 7 }} >
@@ -21,8 +17,8 @@ export default function Socialrecovery(){
                             <figure className='img2'>
                                 <img src={Socialrightimg2} alt="" />
                             </figure>
-                            <h2>Gasless <span>Transactions</span></h2>
-                            <p>Use any token to manage gas fees. Relish the ease as an App or a friend takes care of the gas, turning every transaction into a smooth sail.</p>
+                            <h2>Social  <span>Recovery</span></h2>
+                            <p>Total control, endless recovery possibilities! With familiar logins like email, Google, and Apple, secure your wallet the smart way. Add more guardians, amplify security, and recover with social backup whenever your account goes lost.</p>
                         </div>
                     </Col>
                 </Row>

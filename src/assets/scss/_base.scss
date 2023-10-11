@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 html, html body{
     overflow-x: hidden;
 }
-  
-@font-face {
-    font-family: 'Helsinki';
-    src: url('../fonts/helsinki.ttf');
-    src: local('☺'),  
-         url('../fonts/helsinki.ttf') format('truetype'), 
-}
+
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -26,10 +20,9 @@ div::-webkit-scrollbar-thumb {
 }
   
 body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @include font-24;
     font-weight: 400;
-    line-height: 1.6;
     background-color: $white;
 }
 
@@ -40,12 +33,9 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: 'Helsinki';
+    font-family: 'Plus Jakarta Sans', sans-serif;
 };
 
-h2{
-    @include font-43
-}
 p {
     margin: 0;
 }
@@ -130,8 +120,6 @@ input::-webkit-inner-spin-button {
     }
     &-title {
         & h2 {
-            @include font-43;
-            margin-bottom: 26px;
             line-height: 130%;
         }
         & p {

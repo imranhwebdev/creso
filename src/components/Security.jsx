@@ -9,15 +9,19 @@ export default function Security(){
                     <Row className='align-items-center'>
                         <Col lg={12}>
                             <div className="security-content">
-                               <h2>
-                                    <span className='bsecurityleft'>Boost Security 
+                               <div className='bost_title d-flex justify-content-center'>
+                                    <div className='bsecurityleft d-flex'>
+                                        <h2><span>Boost</span> Security</h2>
+                                       
+                                    </div>
+                                    <div className="key">
                                         <img src={SecurityImgkey} alt="" />
-                                    </span>
-                                    <span className='bsecurityright'>  
+                                    </div>
+                                    <span className='bsecurityright text-end'>  
                                         <img src={SecurityImgRight} alt="" />
-                                        with 2FA
+                                        <h2><span>with</span> 2FA</h2>
                                     </span> 
-                                </h2>
+                                </div>
                                 <p>Enable two-factor authentication and add an extra security layer to your Zonan Wallet, ensuring no assets are withdrawn without verification from another device</p>
                             </div>
                         </Col>

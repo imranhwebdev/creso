@@ -21,7 +21,7 @@ export default function Header(){
             <Navbar collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img src={logo} alt="" />
+                        <a href="/"><img src={logo} alt="" /></a>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -31,7 +31,7 @@ export default function Header(){
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >Socials</Link>
                     </Nav>
                     <a href="/" className='base-btn'>Chart</a>
-                    <a href="/" className='base-btn'><FaShoppingBag /> Buy Creso</a>
+                    <a href="/" className='base-btn active'><FaShoppingBag /> Buy Creso</a>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
