@@ -12,16 +12,16 @@ import Telegram from '../assets/img/telegram.svg'
 import Discord from '../assets/img/descord.svg'
 
 export default function Header(){
-    const [fix, setFix] = useState(false);
+    const [fix, setFix] = useState(false)
     function setFixed(){
-        if(window.scrollY >= 100){
-            setFix(true)
-        }else{
-            setFix(false)
-        }
-    }
-    window.addEventListener("scroll", setFixed);
-    return(
+                if(window.scrollY >= 100){
+                    setFix(true)
+                }else{
+                    setFix(false)
+                }
+            }
+            window.addEventListener("scroll", setFixed)
+         return(
         <header className={fix ? 'heading fixed' : 'heading'}>
             <Navbar collapseOnSelect expand="lg">
                 <Container>
