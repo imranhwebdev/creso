@@ -112,6 +112,37 @@
             margin-top: 0;
         }
     }
+    & .dropdown{
+        img{
+          max-width: 34px;  
+        }
+       & button#dropdown-basic {
+            background: transparent !important;
+            color: #000;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 152.5%;
+            border: 0;
+            img{
+                margin:0 5px
+            }
+        }
+        & .dropdown-menu {
+            border-radius: 23px;
+            background: rgba(255, 255, 255, 0.77) !important;
+            box-shadow: 0px 14px 57px 0px rgba(132, 112, 255, 0.44);
+            backdrop-filter: blur(16.5px);
+            min-width: 236px;
+            border: 0;
+            margin-top: 20px;
+            & .dropdown-item{
+                padding: 12px 15px;
+            }
+        }
+        @include sm{
+            display: none;
+        }
+    }
 }
 
 @media(max-width:992px){
