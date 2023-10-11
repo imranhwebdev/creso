@@ -14,14 +14,39 @@ import Discord from '../assets/img/descord.svg'
 export default function Header(){
     const [fix, setFix] = useState(false)
     function setFixed(){
-                if(window.scrollY >= 100){
-                    setFix(true)
-                }else{
-                    setFix(false)
-                }
-            }
-            window.addEventListener("scroll", setFixed)
-         return(
+        if(window.scrollY >= 100){
+            setFix(true)
+        }else{
+            setFix(false)
+        }
+    }
+    window.addEventListener("scroll", setFixed);
+    const [activeSocial, setActiveSocial] = useState({
+        title:'ETH',
+        img:Eth
+    });
+    const [socialList, setSocialList] = useState([
+        {
+            title:'ETH',
+            img: Eth
+        },
+        {
+            title:'Twitter',
+            img:Twitter
+        },
+        {
+            title:'Telegram',
+            img:Telegram
+        },
+        {
+            title:'Discord',
+            img:Discord
+        },
+    ]);
+    const changeSocial = (e) => {
+        setActiveSocial(e)
+    }
+    return(
         <header className={fix ? 'heading fixed' : 'heading'}>
             <Navbar collapseOnSelect expand="lg">
                 <Container>
@@ -41,13 +66,14 @@ export default function Header(){
                     <div className='header-buttons d-flex align-items-center'>
                             <Dropdown>
                                 <Dropdown.Toggle>
-                                <img src={Eth} alt="" /> ETH
+                                    <img src={activeSocial.img} alt="" /> {activeSocial.title}
                                 </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1"><img src={Twitter} alt="" /> Twitter (X)</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2"><img src={Telegram} alt="" /> Telegram</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3"><img src={Discord} alt="" /> Discord</Dropdown.Item>
+                                <Dropdown.Menu className='overflow-hidden'>
+                                    {socialList.map((item, index) => (
+                                        <Dropdown.Item onClick={()=> changeSocial(item)} key={index}>
+                                            <img src={item.img} alt="" /> {item.title}
+                                        </Dropdown.Item>
+                                    ))}
                                 </Dropdown.Menu>
                             </Dropdown>
                         <a href="/" className='base-btn'>Chart</a>
