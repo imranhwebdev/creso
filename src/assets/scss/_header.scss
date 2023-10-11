@@ -15,9 +15,7 @@
         .navbar-toggler::focus {
            box-shadow: none;
         }
-        & .navbar-toggler-icon{
-            background-image: url('../img/humberger.svg');
-        }
+        
         .navbar-collapse {
             padding: 15px;
             & .navbar-nav {
@@ -116,6 +114,9 @@
         img{
           max-width: 34px;  
         }
+        .dropdown-toggle:after {
+            margin-left: 10px;
+        }
         & .dropdown-toggle.btn.btn-primary{
             background: none !important;
             border: 0 !important;
@@ -137,6 +138,16 @@
             margin-top: 20px;
             & .dropdown-item{
                 padding: 12px 15px;
+                color: rgba(0, 0, 0, 0.60);
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 152.5%;
+                & img{
+                    margin-right: 10px;
+                }
+            }
+            & ::hover .dropdown-item{
+                    font-weight: 600; 
             }
         }
         @include sm{
@@ -155,4 +166,76 @@
         margin: 0;
         margin-top: -5px;
     }
+}
+@media(min-width:992px){
+    .menu__popup{
+        display: none;
+    }
+}
+@media(max-width:991px){
+    .humberger{
+        display: block !important;
+        background: none !important;
+        margin-right: 15px;
+        padding: 0;
+        border: 0 !important;
+    }
+    .menu__popup {
+        position: absolute;
+        max-width: 295px;
+        width: 100%;
+        top: 70px;
+        left: 30px;
+        border-radius: 23px;
+        background: rgba(255, 255, 255, 0.77);
+        box-shadow: 0px 14px 57px 0px rgba(132, 112, 255, 0.44);
+        backdrop-filter: blur(16.5px);
+        padding-top: 32px;
+        padding-bottom: 34px;
+        transition: all .5s ease-in-out;
+        text-align: center;
+        & .avater{
+           & img{
+                max-width: 76px;
+           }
+        }
+        & p{
+            font-size: 14px;
+            color: $black;
+            font-weight: 500;
+            line-height: 152.5%;
+        }
+        & .mobile__menu{
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            & ul{
+                li{
+                    a{
+                        color: rgba(0, 0, 0, 0.60);  
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 152.5%;
+                        padding: 13px 22px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        & .header__social__icon{
+            ul{
+                li{
+                    a{
+                        display: inline-block;
+                        padding: 0px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px){
+
 }

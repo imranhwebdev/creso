@@ -29,7 +29,7 @@ export default function Footer(){
                 <Col lg={12}>
                     <div className="footer-content text-center">
                        <a href="/" className='footer-logo'> <img src={FooterLogo} alt="" /></a>
-                        <p>© Copyright 202 Mr.farahzad, Inc.</p>
+                        <p>© Copyright 2023 Mr.farahzad, Inc.</p>
                     </div>
                 </Col>
             </Row>

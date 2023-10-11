@@ -160,6 +160,19 @@
         font-size: 30px;
     }
 }
+@mixin font-62 {
+    font-size: 62px;
+    line-height: 132%;
+    @include lg {
+        font-size: 48px;
+    }
+    @include md {
+        font-size: 38px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
 
 @mixin font-65 {
     font-size: 65px;

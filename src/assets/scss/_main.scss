@@ -805,3 +805,375 @@
     color: $white;
     border-color: #FF4085;
 }
+
+
+/*
+*stakehero content Style
+*============*/
+.stake__hero{
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    &::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('../img/stake-left-shap.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('../img/social-right-shap.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top right;
+        z-index: -1;
+    }
+    .stakehero-content{
+        & .stakeimg1{
+            max-width: 66px;
+            margin-top: 20px;
+            margin-right: 30px;
+            
+        }
+        & h1{
+            @include font-62;
+            font-weight: 400;
+            line-height: 172.5%;
+            text-transform: uppercase;
+            & b{
+                font-weight: 700
+            }
+        }
+        & p{
+            @include font-20;
+            color: rgba(0, 0, 0, 0.65);
+            font-weight: 300;
+            line-height: 152.5%;
+        }
+        & .stake__heroimg{
+            max-width: 620px;
+            margin-top: 49px;
+        }
+        .content p{
+            max-width: 378px;
+        }
+    }
+    & .stakehero-right{
+        position: relative;
+        z-index: 1;
+        padding-top: 60px;
+        padding-left: 28px;
+        padding-right: 29px;
+        padding-bottom: 29px;
+        @include sm{
+            padding-top: 45px;
+            padding-left: 19px;
+            padding-right: 19px;
+            padding-bottom: 19px;
+
+        }
+        transform: translateY(45px);
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/Stake_ether.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: top left;
+            z-index: -1;
+        }
+        & .stake__switch{
+            max-width: 320px;
+            border-radius: 36.653px;
+            background: #1B04AA;
+            padding: 10px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            @include sm{
+                margin-bottom: 24px;
+            }
+            ul{
+                @include sm{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                li{
+                    display: inline-block;
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 150%;
+                    cursor: pointer;
+                    padding: 12px 48px;
+                    @include sm{
+                        padding: 8px 31px;
+                        font-size: 12px;
+
+                    }
+                    
+                }
+                li.active{
+                    border-radius: 43.872px;
+                    background: #FF4085;
+                }
+                li:hover{
+                    border-radius: 43.872px;
+                    background: #FF4085;
+                    padding: 12px 48px;
+                }
+            }
+        }
+        .stake__box_title{
+            color: $white;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 152.5%; /* 25.925px */
+            letter-spacing: -0.51px;
+            margin-bottom: 29px;
+            @include sm{
+                margin-bottom: 14px;
+            }
+        }
+        .stake__ether_box{
+            border-radius: 40px;
+            background: #1B04AA;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .minus{
+                display: flex;
+                gap: 22px;
+                align-items: center;
+                figure{
+                    padding: 10px;
+                    background: #fff;
+                    width: 54px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    margin: 0;
+                    transition: .3s;
+                    img{
+                        max-width: 24px;
+                    }
+                    @include sm{
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+                figure:hover{
+                    background: rgba(255, 255, 255, 0.50);
+                }
+                span{
+                    color: $white;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 152.5%;
+                    @include sm{
+                        font-size: 16px;
+                    }
+                }
+                
+            }
+            .max{
+                display: flex;
+                gap: 22px;
+                align-items: center;
+                figure{
+                    padding: 10px;
+                    background: #fff;
+                    width: 54px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    margin: 0;
+                    transition: .3s;
+                    img{
+                        max-width: 24px;
+                    }
+                    @include sm{
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+                figure:hover{
+                    background: rgba(255, 255, 255, 0.50);
+                }
+                
+                span{
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 152.5%;
+                    @include sm{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .yellow{
+            color:#D0F500;
+        }
+        .balance{
+            p{
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 152.5%; 
+                span{
+                    font-weight: 600;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .transection__summary{
+            margin-top: 27px;
+            @include sm{
+                margin-bottom: 16px;
+            }
+            .transection__box{
+                border-radius: 34px;
+                background: #1B04AA;
+                padding:38px 25px;
+                .sigle-item{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    p{
+                        color: rgba(255, 255, 255, 0.70);
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 152.5%;
+                    }
+                    span{
+                        color: $white;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 152.5%;
+                        
+                        @include sm{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .sigle-item:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .stake__eth_btn {
+            border-radius: 81px;
+            background: #D0F500;
+            width: 100%;
+            display: block;
+            text-align: center;
+            color: $black;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 152.5%;
+            padding: 30px;
+            margin-top: 25px;
+            
+            @include sm{
+                padding: 18px;
+                font-size: 16px;
+            }
+        }
+        .stake__eth_btn:hover{
+            background: #FF4085;
+            color: $white;
+        }
+    }
+}
+
+
+/*
+*Stake Style
+*============*/
+.Stake__footer{
+    background: $black;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    z-index: 1;
+    & .footer-menu{
+        ul{
+            li{
+                display: inline-block;
+                margin-right: 22px;
+                
+                @include mmd{
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    padding: 15px;
+                }
+                @include sm{
+                   display: block;
+                   margin-bottom: 5px;
+                }
+                & a{
+                    color: $white;
+                    @include font-22;
+                    font-weight: 300;
+                    line-height: 152.5%;
+                }
+            }
+            @include mmd{
+                text-align: center;
+            }
+        }
+    }
+    & .footer-logo img{
+        max-width: 217px;
+        margin-bottom: 15px;
+        @include sm{
+            max-width: 118px;
+        }
+    }
+    p{
+        color: $light_black_seven;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 152.5%; /* 30.5px */
+        text-transform: capitalize;
+        
+        @include sm{
+            font-size: 12px;
+        }
+    }
+    & .join__buttons{
+        a.active{
+            background: $white;
+            color: $black;
+        }
+        & a:hover.active{
+            background: #FF4085;
+            color: $white;
+            border-color: #FF4085;
+        }
+    }
+}
