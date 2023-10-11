@@ -1,8 +1,807 @@
 /*
+*Hero Style
+=============*/
+.hero{
+    position: relative;
+    z-index: 2;
+    padding-top: 90px;
+    &::before{
+        top: -30%;
+        width: 50%;
+        background-image: url('../img/hero-shap.png');
+        @include beforeimg;
+    }
+    & .hero-content{
+       & span{
+           @include font-41;
+           color: $light_black_one;
+
+        }
+       & h1{
+        margin-top: 15px;
+        margin-bottom: 33px;
+        color: $black;
+        text-transform: uppercase;
+        @include font-90;
+            & span{
+                display: block;
+                font-weight: 300;
+                @include font-90;
+                color: $black;
+
+                & b{
+                    font-weight: 700;
+                }
+
+               & img{
+                    max-width: 66px;
+                    margin-top: -12px;
+                    @include lg{
+                        max-width: 40px;
+                    }
+                    @include mmd{
+                        max-width: 40px;
+                    }
+                }
+        }
+       }
+       & p{
+        color: $light_black_three;
+        @include font-20;
+        text-transform: capitalize;
+        font-weight: 300;
+        line-height: 152%;
+        max-width: 499px;
+        & b{
+            font-weight: 600;
+        }
+       }
+    }
+    & .hero-right{
+        position: relative;
+        & .img1{
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 144px;
+            @include lg{
+                max-width: 100px;
+            }
+            @include mmd{
+                max-width: 100px;
+            }
+        }
+        & .img2{
+            max-width: 704px;
+            margin-right: -60px;
+            margin-left: -150px;
+            @include lg{
+                margin-right: -15px;
+                margin-left: auto;
+                
+                max-width: 500px;
+            }
+            @include mmd{
+                margin-right: -15px;
+                margin-left: auto;
+                
+                max-width: 500px;
+            }
+        }
+    }
+    @include lg{
+        padding-top: 50px;
+    }
+    @include mmd{
+        padding-top: 50px;
+    }
+}
+/*
 *About Style
 =============*/
 .about{
-    & .about-wrapper{
-        background-image: url(../img/about-bg.png);
+    position: relative;
+    z-index: 1;
+    &::after{
+        @include afterimg;
+        background-image: url('../img/about-shap.png');
     }
+    & .about-wrapper{
+        position: relative;
+        z-index: 1;
+        padding-top: 200px;
+        padding-bottom: 80px;
+        margin-top: -350px;
+        padding-right: 15px;
+        padding-left: 15px;
+        @include lg{
+            margin-top: -200px;
+        }
+        
+        &::after{
+            @include afterimg;
+            background-image: url(../img/about-bg.png);
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-size: 100% 100%;
+            background-position: bottom left;
+            @include mmd{
+                background-image: url(../img/about-bg-responsive.png);
+            }
+        }
+        & .about-left{
+            & figure{
+                max-width: 530px;
+                margin-bottom: -190px;
+                margin-left: 20px;
+                @include lg{
+                    max-width: 450px;
+                }
+                @include mmd{
+                    max-width: 400px;
+                    margin-left:auto;
+                    margin-right:auto;
+                    margin-top: 30px;
+                }
+            }
+        }
+        & .about-content{
+            @include sm{
+               padding-top: 150px;
+            }
+            & figure{
+                max-width: 130px;
+                margin-left: -80px;
+                @include sm{
+                    position: absolute;
+                    right: 15%;
+                    top: 55%;
+                    max-width: 80px;
+                }
+            }
+            & h2{
+                margin-top: 75px;
+                color: $white;
+                @include font-90;
+                font-weight: 800;
+                line-height: 1.2em;
+                letter-spacing: -2.7px;
+                text-transform: uppercase;
+                margin-bottom: 47px;
+                position: relative;
+                @include mmd{
+                    margin-bottom: 20px;
+                }
+                @include sm{
+                    margin-top: 0px;
+                }
+                & span{
+                    color: $light_black_four;
+                    font-weight: 500;
+                    display: block;
+                }
+                & img{
+                    max-width: 66px;
+                    margin-top: -15px;
+                    
+                @include mmd{
+                    max-width: 35px;
+                }
+                @include sm{
+                    position: absolute;
+                    top: 20px;
+                    left: 200px;
+                }
+                }
+                @include md{
+                    text-align: center;
+                }
+            }
+            p{
+                max-width: 453px;
+                font-weight: 300;
+                line-height: 152.5%;
+                text-transform: capitalize;
+                @include font-22;
+                text-align: justify;
+                color: $light_black_five;
+                @include md{
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+*Gasless Style
+=============*/
+.gasless{
+    position: relative;
+    z-index: 1;
+    padding-top: 85px;
+    margin-top: 60px;
+    padding-bottom: 180px;
+    &::before{
+        top: 0;
+        width: 50%;
+        background-image: url('../img/gasless-shap.png');
+        @include beforeimg;
+    }
+    @include lg{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+    @include mmd{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    & .gasless-right-img{
+        position: absolute;
+        right: 0;
+        top: 80px;
+        width: 50%;
+        height: 100%;
+        
+        @include md{
+            max-width: 650px;
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+        }
+  
+        @include sm{
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            max-width: 450px;
+            top: 60px;
+            left: 15px;
+        }
+    }
+    & .gasless-content{
+        position: relative;
+        @include mmd{
+            max-width:576px;
+            margin: 0 auto;
+        }
+        @include sm{
+            max-width:480px;
+        }
+        & .img1{
+            max-width: 116px;
+            margin-bottom: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            @include mmd{
+                margin-bottom: 70px;
+                max-width: 60px;
+            }
+        }
+        & .img2{
+            max-width: 66px;
+            @include mmd{
+                max-width: 40px;
+            }
+        }
+        & .img3{
+            max-width: 119px;
+            position: absolute;
+            top: 30%;
+            right: -30px;
+            @include mmd{
+                max-width: 70px;
+                right: 0px;
+            }
+        }
+        & h2{
+            margin-top: 30px;
+            @include font-112;
+            font-weight: 800;
+            letter-spacing: -3.36px;
+            text-transform: uppercase;
+            color: $black;
+            line-height: 120%;
+            & span{
+                display: block;
+                @include font-68;
+                letter-spacing: -2.04px;
+                text-transform: uppercase;
+                color: $light_black_six;
+                font-weight: 400;
+            }
+            @include mmd{
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+        & p{
+            max-width: 530px;
+            text-align: justify;
+            color: $light_black_three;
+            text-transform: capitalize;
+            line-height: 152.5%;
+            font-weight: 300;
+            @include mmd{
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+/*
+*Socialrecovery Style
+====================*/
+.socialrecovery{
+    position: relative;
+    z-index: 1;
+    padding-top: 150px;
+    margin-top: 35px;
+    padding-bottom: 60px;
+    &::after{
+        background-image: url('../img/social-shap.png');
+        @include afterimg;
+    }
+    @include lg{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 90px;
+    }
+    @include mmd{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+    }
+  
+    & .socialrecovery-left-img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        
+        @include md{
+            max-width: 650px;
+            position: relative;
+            width: 100%;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+  
+        @include sm{
+            position: relative;
+            width: 100%;
+            margin-right: auto;
+            max-width: 450px;
+            top: 40px;
+            right: 15px;
+            margin-top: 20px;
+        }
+    }
+    & .socialrecovery-content{
+        position: relative;
+        & .img1{
+            max-width: 145px;
+            margin-bottom: 90px;
+            margin-right: auto;
+            margin-left: auto;
+            @include mmd{
+                margin-bottom: 70px;
+                max-width: 60px;
+                display: none;
+            }
+        }
+        & .img2{
+            max-width: 66px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform:translateY(-50%);
+            margin-top: -33px;
+            @include mmd{
+                max-width: 40px;
+                top: 0;
+                left: 50%;
+                margin-left: -20px;
+            }
+        }
+        & h2{
+            margin-top: 30px;
+            @include font-112;
+            font-weight: 800;
+            letter-spacing: -3.36px;
+            text-transform: uppercase;
+            color: $black;
+            line-height: 120%;
+            & span{
+                display: block;
+                @include font-80;
+                letter-spacing: -2.04px;
+                text-transform: uppercase;
+                color: $light_black_six;
+                font-weight: 400;
+            }
+            @include mmd{
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+        & p{
+            max-width: 530px;
+            text-align: justify;
+            color: $light_black_three;
+            text-transform: capitalize;
+            line-height: 152.5%;
+            font-weight: 300;
+            @include mmd{
+                text-align: center;
+                margin: 0 auto;
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+
+/*
+*Security Style
+====================*/
+.security{
+    position: relative;
+    z-index: 1;
+    margin-top: 210px;
+    @include lg{
+        margin-top: 150px;
+    }
+    @include mmd{
+        margin-top: 100px;
+    }
+    @include sm{
+        margin-top: 50px;
+    }
+    &::before{
+        top: 80px;
+        width: 100%;
+        background-image: url('../img/security-shap.png');
+        @include beforeimg;
+    }
+    & .security-content{
+       @include mmd{
+            max-width: 680px;
+            margin: 0 auto;
+       }
+        .bost_title{
+            column-gap: 20px;
+            @include mmd{
+                flex-wrap: wrap;
+            }
+        }
+        & .bsecurityleft{
+            & h2{
+                @include font-112;
+                font-weight: 800;
+                letter-spacing: -3.36px;
+                text-transform: uppercase;
+                color: $black;
+                line-height: 98%;
+                   
+            }
+            & span{
+                font-weight: 400;
+                display: block;
+                color: $light_black_six;
+            }
+            
+        }
+        & .key{
+            & img{
+                max-width: 220px;
+                margin-top: -80px;
+                @include lg{
+                    max-width: 100px;
+                    margin-top: -50px;
+                }
+                @include mmd{
+                    max-width: 120px;
+                    margin-top: -50px;
+                }
+                @include sm{
+                    width: 80px;
+                }
+            }
+        }
+        & .bsecurityright{
+            & h2{
+                @include font-112;
+                display: flex;
+                font-weight: 800;
+                letter-spacing: -3.36px;
+                text-transform: uppercase;
+                color: $black;
+                line-height: 1.2em;
+                   & span{
+                    font-weight: 300;
+                   }
+            }
+            & img{
+                max-width: 110px;
+                margin-bottom: 25px;
+                margin-top: 30px;
+                @include xl{
+                    margin-top: 0;
+                }
+                @include lg{
+                    margin-top: 0;
+                    margin-bottom: 16px
+                }
+                @include mmd{
+                    margin-top: 0;
+                    margin-bottom: 5px
+                }
+                @include sm{
+                    max-width: 70px;
+                    height: 30px;
+                    margin-top: 10px;
+                }
+                
+            }
+            &{
+                @include sm{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 15px;
+                    align-items: center;
+                }
+            }
+           
+        }
+       & p{
+        max-width: 970px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        text-transform: capitalize;
+        color: $light_black_three;
+        line-height: 152.5%;
+        @include sm{
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+       }
+    }
+}
+
+
+/*
+*Jointheadvance Style
+====================*/
+.jointheadvance{
+    padding-top: 50px;
+    @include sm{
+        padding-top: 0;
+    }
+    & .jointheadvance__wrapper{
+        position: relative;
+        z-index: 2;
+        & .join__advenced__top{
+            padding-left: 180px;
+            padding-right: 180px;
+            @include mmd{
+                padding-left: 100px;
+                padding-right: 100px; 
+            }
+            @include ssm{
+                padding-left: 50px;
+                padding-right: 50px; 
+            }
+        }
+        
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -90px;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/join-bg.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 100% 100%;
+            z-index: -1;
+            @include sm{
+                background-image: url(../img/join-bg-responsive.png);
+            }
+        }
+        & .jointheadvance-top{
+            margin-right: 80px;
+            @include mmd{
+                margin-right: 40px;
+            }
+            @include sm{
+                margin-right: 20px;
+                margin-top: 50px;
+            }
+            & figure{
+                max-width: 832px;
+                margin: 0 auto;
+            }
+        }
+        & .jointheadvance-bottom{
+            & h2{
+                @include font-65;
+                line-height: 1.2em;
+                font-weight: 800;
+                letter-spacing: -1.95px;
+                text-transform: uppercase;
+                color: $white;
+                & span{
+                    display: block;
+                }
+                & .join{
+                    font-weight: 300;
+                }
+                & .wallet{
+                    font-weight: 500;
+                    color: $light_black_four;
+                }
+            }
+            & .joinimg2{
+                position: absolute;
+                max-width: 164px;
+                right: 180px;
+                @include mmd{
+                    max-width: 100px;
+                    right: 100px;
+                }
+                @include sm{
+                    max-width: 70px;
+                    right: 0px;
+                }
+            }
+            & .joinimg3{
+                max-width: 66px;
+            }
+            & p{
+                font-weight: 300;
+                line-height: 152.5%; /* 36.6px */
+                text-transform: capitalize;
+                color: $light_black_seven;
+                margin-top: 37px;
+            }
+            & form{
+                margin-top: 85px;
+                margin-bottom: 90px;
+                @include sm{
+                    margin-bottom: 0;
+                    margin-top: 40px;
+                }
+                max-width: 680px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                & input{
+                    height: 104px;
+                    position: relative;
+                    border-radius: 85px;
+                    border: 1px solid $white;
+                    background: $white;
+                    padding-left: 44px;
+                    @include sm{
+                        padding-left: 20px;
+                        @include font-20;
+                        text-align: center
+                    }
+                    @include font-24;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    color: $light_black_three;
+                    @include sm{
+                       height: 56px;
+                    }
+                }
+                & button{
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    padding:20px 0;
+                    min-width: 200px;
+                    border-radius: 44.279px;
+                    background: $black;
+                    color: $white;
+                    text-align: center;
+                    border:1px solid $black;
+                    @include font-20;
+                    @include sm{
+                        position: relative;
+                        right: 0;
+                        width: 100%;
+                        padding:13px 0;
+                    }
+                }
+                & button:hover{
+                        background: $white !important;
+                        color: $black !important;
+                }
+            }
+        }
+        
+    }
+    & .join__advenced__bottom{
+        border-top: 1px solid rgba(255, 255, 255, 0.38);
+        padding-top: 40px;
+        margin-left: 37px;
+        margin-right: 37px;
+        padding-bottom: 5px;
+        margin-bottom: -165px;
+        @include mmd{
+            margin-bottom: -140px;
+        }
+        @include sm{
+            margin-bottom: 0;
+        }
+        & .row{
+            margin-bottom: -60px;
+        }
+    }
+    & .join__menu{
+        & ul li {
+            display: inline-block;
+            & a{
+                padding: 12px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 152.5%;
+                color: $white;
+            }
+            
+           
+        }
+        & li a:hover{
+            opacity: .5 !important;
+        }
+        
+    }
+   
+}
+.join__buttons a {
+    margin-left: 11px;
+    border-radius: 44.279px;
+    color: $white;
+    @include font-20;
+    font-weight: 300;
+    line-height: 152.5%;
+    border-color: $white;
+    padding:16px 36px;
+    margin-bottom: 10px;
+}
+.join__buttons a.active {
+    background: #FF4085;
+    border-color: #FF4085;
+}
+
+.join__buttons a svg {
+   rotate: -30deg;
+   margin-top: -7px;
+   margin-right: 8px;
+}
+
+.join__buttons a:hover {
+    background: #FF4085;
+    color: $white;
+    border-color: #FF4085;
 }
