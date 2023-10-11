@@ -45,7 +45,7 @@ export default function Header(){
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1"> <img src={Twitter} alt="" /> Twitter (X)</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-1"><img src={Twitter} alt="" /> Twitter (X)</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2"><img src={Telegram} alt="" /> Telegram</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3"><img src={Discord} alt="" /> Discord</Dropdown.Item>
                                 </Dropdown.Menu>
