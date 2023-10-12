@@ -20,7 +20,7 @@ export default function Footer(){
                 <Col lg={4} className='order-3 order-lg-2 mt-4 mt-lg-0'>
                     <div className="footer-middle text-center">
                        <a href="/" className='footer-logo'> <img src={FooterLogo} alt="" /></a>
-                        <p>© Copyright 2023 Mr.farahzad, Inc.</p>
+                        <p>Copyright 2023</p>
                     </div>
                 </Col>
                 <Col lg={4} className='order-2 order-lg-3'>

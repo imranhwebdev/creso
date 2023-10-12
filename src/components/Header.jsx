@@ -20,16 +20,6 @@ export default function Header(){
     const setMobile = () => {
         setIsMobile(!isMobile);}
 
-
-    const [fix, setFix] = useState(false)
-    function setFixed(){
-        if(window.scrollY >= 100){
-            setFix(true)
-        }else{
-            setFix(false)
-        }
-    }
-    window.addEventListener("scroll", setFixed);
     const [activeSocial, setActiveSocial] = useState({
         title:'ETH',
         img:Eth
@@ -56,7 +46,7 @@ export default function Header(){
         setActiveSocial(e)
     }
     return(
-        <header className={fix ? 'heading fixed' : 'heading'}>
+        <header className="heading">
             <Navbar collapseOnSelect expand="lg">
                 <Container>
                     <div className='d-flex'>
@@ -69,9 +59,9 @@ export default function Header(){
                     </div>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <NavLink to="stake"  spy={true} smooth={true} offset={50} duration={500} >Stake</NavLink>
-                            <NavLink to="blog" spy={true} smooth={true} offset={50} duration={500} >Blog</NavLink>
-                            <NavLink to="socials" spy={true} smooth={true} offset={50} duration={500} >Socials</NavLink>
+                            <NavLink to="/stake">Stake</NavLink>
+                            <NavLink to="/blog">Blog</NavLink>
+                            <NavLink to="/socials">Socials</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                     <div className='header-buttons d-flex align-items-center'>
@@ -110,9 +100,9 @@ export default function Header(){
                         </Dropdown>
                         <div className="mobile__menu">
                             <ul>
-                                <li><NavLink to="stake"  spy={true} smooth={true} offset={50} duration={500} >Stake</NavLink></li>
-                                <li><NavLink to="blog" spy={true} smooth={true} offset={50} duration={500} >Blog</NavLink></li>
-                                <li><NavLink to="socials" spy={true} smooth={true} offset={50} duration={500} >Socials</NavLink></li>
+                                <li><NavLink to="/stake">Stake</NavLink></li>
+                                <li><NavLink to="/blog">Blog</NavLink></li>
+                                <li><NavLink to="/socials">Socials</NavLink></li>
                             </ul>
                         </div>
                         <div className="header__social__icon">

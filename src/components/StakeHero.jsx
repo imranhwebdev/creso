@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap'
 import StakeImg1 from '../assets/img/stakehero-img1.png'
 import Stakeheroimg from '../assets/img/stake-left-img.png'
 import Dash from '../assets/img/dash.png'
 import Plus from '../assets/img/plus-02.png'
 const StakeHero = () => {
+    const [counter, setCounter] = useState(15);
+    const incrementHandler = () => {
+        setCounter((val) => val + 1);
+    };
+    const decrementHandler = () => {
+        setCounter((val) => val - 1)
+    }
     return (
             <div className="stake__hero">
             <Container>
@@ -37,14 +44,14 @@ const StakeHero = () => {
                                 <h4 className='stake__box_title'>Stake Ether</h4>
                                 <div className="stake__ether_box">
                                         <div className="minus">
-                                            <figure>
+                                            <figure onClick={decrementHandler}>
                                                 <img src={Dash} alt="" />
                                             </figure>
-                                            <span>15.00</span>
+                                            <span>{counter}</span>
                                         </div>
                                         <div className="max">
                                             <span className='yellow'>MAX</span>
-                                            <figure>
+                                            <figure onClick={incrementHandler}>
                                                 <img src={Plus} alt="" />
                                             </figure>
                                         </div>

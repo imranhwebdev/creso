@@ -11,9 +11,9 @@ export default function Footer(){
                     <Col md={12}>
                         <div className="join__menu text-center mb-4">
                             <ul>
-                                <li><a href="/">Stake</a></li>
-                                <li><a href="/">Blog</a></li>
-                                <li><a href="/">Socials</a></li>
+                                <li><a href="/stake">Stake</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/socials">Socials</a></li>
                             </ul>
                         </div>
                     </Col>
@@ -28,8 +28,8 @@ export default function Footer(){
             <Row>
                 <Col lg={12}>
                     <div className="footer-content text-center">
-                       <a href="/" className='footer-logo'> <img src={FooterLogo} alt="" /></a>
-                        <p>© Copyright 2023 Mr.farahzad, Inc.</p>
+                        <a href="/" className='footer-logo'> <img src={FooterLogo} alt="" /></a>
+                        <p>Copyright 2023 </p>
                     </div>
                 </Col>
             </Row>
