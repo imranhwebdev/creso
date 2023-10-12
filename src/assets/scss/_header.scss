@@ -155,7 +155,13 @@
         }
     }
 }
-
+@media(min-width:992px) and (max-width:1070px){
+    .heading .base-btn {
+        border-radius: 30px;
+        padding: 14px 32px;
+        font-size: 18px;
+    }
+}
 @media(max-width:992px){
     a.base-btn.Buy {
         border-radius: 50%;
@@ -191,7 +197,7 @@
         box-shadow: 0px 14px 57px 0px rgba(132, 112, 255, 0.44);
         backdrop-filter: blur(16.5px);
         padding-top: 32px;
-        padding-bottom: 34px;
+        padding-bottom: 22px;
         transition: all .5s ease-in-out;
         text-align: center;
         & .avater{
@@ -220,6 +226,9 @@
                         padding: 13px 22px;
                         display: inline-block;
                     }
+                    a:hover{
+                        color: rgb(0, 0, 0);
+                    }
                 }
             }
         }
@@ -230,12 +239,28 @@
                         display: inline-block;
                         padding: 0px 12px;
                     }
+                    a:hover{
+                        rotate: 30deg;
+                    }
                 }
             }
         }
     }
 }
 
-@media(max-width:576px){
-
+@media(max-width:992px){
+    .header__social__icon{
+        Ul{
+            transition: all .3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .show_social{
+            transition: all .3s ease-in-out;
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+        }
+    }
 }

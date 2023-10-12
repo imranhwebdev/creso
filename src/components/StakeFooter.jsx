@@ -11,9 +11,9 @@ export default function Footer(){
                 <Col lg={4}>
                     <div className="footer-menu">
                         <ul>
-                            <li><NavLink to="stake"  spy={true} smooth={true} offset={50} duration={500} >Stake</NavLink></li>
-                            <li><NavLink to="blog" spy={true} smooth={true} offset={50} duration={500} >Blog</NavLink></li>
-                            <li><NavLink to="socials" spy={true} smooth={true} offset={50} duration={500} >Socials</NavLink></li>
+                            <li><NavLink to="/stake" >Stake</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/socials">Socials</NavLink></li>
                         </ul>
                     </div>
                 </Col>

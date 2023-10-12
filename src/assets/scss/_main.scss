@@ -911,47 +911,48 @@
             background-position: top left;
             z-index: -1;
         }
-        & .stake__switch{
-            max-width: 320px;
+        & .nav-tabs{
+            max-width: 325px;
             border-radius: 36.653px;
             background: #1B04AA;
             padding: 10px;
             margin: 0 auto;
             margin-bottom: 40px;
             padding-top: 12px;
+            border:0;
             @include sm{
                 margin-bottom: 24px;
                 max-width: 230px;
             }
-            ul{
+            li{
+               button{
+                display: inline-block;
+                color: $white;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 150%;
+                cursor: pointer;
+                padding: 12px 48px;
+                border:0;
+                border-radius: 43.872px;
                 @include sm{
-                    display: flex;
-                    justify-content: space-between;
+                    font-size: 12px;
+                    width: 100px;
+                    padding: 12px 0;
+                    text-align: center;
                 }
-                li{
-                    display: inline-block;
-                    color: $white;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 150%;
-                    cursor: pointer;
-                    padding: 12px 48px;
-                    @include sm{
-                        font-size: 12px;
-                        width: 100px;
-                        padding: 12px 0;
-                        text-align: center;
-                    }
-                    
-                }
-                li.active{
+               }
+                
+            }
+            li{
+                button.active{
                     border-radius: 43.872px;
                     background: #FF4085;
                 }
-                li:hover{
-                    border-radius: 43.872px;
-                    background: #FF4085;
-                }
+            }
+            li:hover{
+                border-radius: 43.872px;
+                background: #FF4085;
             }
         }
         .stake__box_title{
@@ -997,7 +998,7 @@
                     }
                 }
                 figure:hover{
-                    background: rgba(255, 255, 255, 0.50);
+                    background: rgba(255, 255, 255, 0.81);
                 }
                 span{
                     color: $white;
@@ -1036,7 +1037,7 @@
                     }
                 }
                 figure:hover{
-                    background: rgba(255, 255, 255, 0.50);
+                    background: rgba(255, 255, 255, 0.81);
                 }
                 
                 span{
